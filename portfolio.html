@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anes Bouziad — CS Student & Developer</title>
+
+  <!-- Fonts: Noto Serif (display) + Space Grotesk (technical) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a href="#home" class="nav__logo" aria-label="Go to top">ANES BOUZIAD</a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#home" class="nav__link active" data-section="home" data-i18n="nav_home">Hero</a></li>
+        <li><a href="#about" class="nav__link" data-section="about" data-i18n="nav_about">About</a></li>
+        <li><a href="#skills" class="nav__link" data-section="skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#projects" class="nav__link" data-section="projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#contact" class="nav__link" data-section="contact" data-i18n="nav_contact">Contact</a></li>
+        
+      </ul>
+      <button id="lang-toggle" class="nav__lang" type="button" aria-label="Switch language">FR</button>
+
+      <!-- Hamburger -->
+      <button class="nav__hamburger" aria-label="Toggle menu" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__overlay" id="mobileOverlay" aria-hidden="true">
+  <a href="#home" class="nav__overlay-link" onclick="closeMenu()" data-i18n="nav_home">Home</a>
+  <a href="#about" class="nav__overlay-link" onclick="closeMenu()" data-i18n="nav_about">About</a>
+  <a href="#skills" class="nav__overlay-link" onclick="closeMenu()" data-i18n="nav_skills">Skills</a>
+  <a href="#projects" class="nav__overlay-link" onclick="closeMenu()" data-i18n="nav_projects">Projects</a>
+  <a href="#contact" class="nav__overlay-link" onclick="closeMenu()" data-i18n="nav_contact">Contact</a>
+</div>
+
+  <!-- Progress bar -->
+  <div class="nav__progress" aria-hidden="true">
+    <div class="nav__progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="section" id="home" aria-label="Hero">
+    <div class="container">
+      <div class="hero__inner">
+
+        <div class="hero__left fade-up">
+          <p class="hero__sys" data-i18n="hero_sys">SYSTEM_INIT / 2026</p>
+          <h1 class="hero__title" data-i18n="hero_title_html">ANES<br>BOUZIAD.</h1>
+          <p class="hero__sub" data-i18n="hero_sub">
+            Computer Science student from Constantine, Algeria. Passionate about
+            Linux systems, Assembly language, algorithm complexity, and crafting
+            efficient low-level architectures.
+          </p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn-primary" data-i18n="hero_projects">View Projects ↗</a>
+            <a href="#contact" class="btn-ghost" data-i18n="hero_contact">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero__right fade-up" style="transition-delay:180ms">
+          <p class="hero__right-label" data-i18n="hero_spec">// SYSTEM_SPEC</p>
+          <div class="hero__spec-grid">
+            <div class="hero__spec-item">
+              <p class="hero__spec-key" data-i18n="spec_status_key">STATUS</p>
+              <p class="hero__spec-val" data-i18n="spec_status_val">CS Student</p>
+            </div>
+            <div class="hero__spec-item">
+              <p class="hero__spec-key" data-i18n="spec_location_key">LOCATION</p>
+              <p class="hero__spec-val" data-i18n="spec_location_val">Constantine, DZ</p>
+            </div>
+            <div class="hero__spec-item">
+              <p class="hero__spec-key" data-i18n="spec_focus_key">FOCUS</p>
+              <p class="hero__spec-val" data-i18n="spec_focus_val">Systems & Low-Level</p>
+            </div>
+            <div class="hero__spec-item">
+              <p class="hero__spec-key" data-i18n="spec_stack_key">STACK</p>
+              <p class="hero__spec-val" data-i18n="spec_stack_val">C · Assembly · Linux</p>
+            </div>
+            <div class="hero__spec-item">
+              <p class="hero__spec-key" data-i18n="spec_year_key">YEAR</p>
+              <p class="hero__spec-val" data-i18n="spec_year_val">2026</p>
+            </div>
+            <div class="hero__spec-item">
+              <p class="hero__spec-key" data-i18n="spec_availability_key">AVAILABILITY</p>
+              <p class="hero__spec-val" data-i18n="spec_availability_val">Open to Collabs</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about" aria-label="About">
+    <div class="container">
+      <p class="label fade-up" data-i18n="about_label">01 — ARCHITECT_PROFILE</p>
+      <div class="about__grid">
+
+        <div class="about__left fade-up" style="transition-delay:120ms">
+          <h2 class="about__headline" data-i18n="about_headline_html">THE ENGINEER<br>BEHIND THE<br>STACK.</h2>
+          <div class="about__stats">
+            <div>
+              <p class="about__stat-num">3+</p>
+              <p class="about__stat-lbl" data-i18n="about_stat_1">Years Coding</p>
+            </div>
+            <div>
+              <p class="about__stat-num">20+</p>
+              <p class="about__stat-lbl" data-i18n="about_stat_2">Projects Built</p>
+            </div>
+            <div>
+              <p class="about__stat-num">5+</p>
+              <p class="about__stat-lbl" data-i18n="about_stat_3">Tech Stack</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__right fade-up" style="transition-delay:240ms">
+          <p class="about__body" data-i18n="about_body_1">
+            I am a Computer Science student dedicated to building robust, efficient,
+            and precise software systems. My approach favors structural clarity and
+            technical rigor over fleeting trends — every line of code is a deliberate
+            architectural decision.
+          </p>
+          <p class="about__body" data-i18n="about_body_2">
+            From low-level Assembly routines and Linux kernel internals to algorithm
+            complexity analysis and system optimization, I build software that performs
+            under pressure and scales with intent.
+          </p>
+
+          <div class="about__fact-row">
+            <div>
+              <p class="about__fact-key" data-i18n="fact_uni_key">UNIVERSITY</p>
+              <p class="about__fact-val" data-i18n="fact_uni_val_html">Computer Science,<br>Jijel , Algeria</p>
+            </div>
+            <div>
+              <p class="about__fact-key" data-i18n="fact_interest_key">CORE INTERESTS</p>
+              <p class="about__fact-val" data-i18n="fact_interest_val">Linux · Assembly · Algorithms · Hardware · System Optimization</p>
+            </div>
+            <div>
+              <p class="about__fact-key" data-i18n="fact_lang_key">LANGUAGES</p>
+              <p class="about__fact-val" data-i18n="fact_lang_val">C · JavaScript · Python · Assembly · Bash</p>
+            </div>
+            <div>
+              <p class="about__fact-key" data-i18n="fact_philo_key">PHILOSOPHY</p>
+              <p class="about__fact-val" data-i18n="fact_philo_val_html">Correctness first,<br>efficiency always.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills" aria-label="Skills">
+    <div class="container">
+      <p class="label fade-up" data-i18n="skills_label">02 — TECHNICAL_RIGOR</p>
+
+      <div class="skills__header fade-up" style="transition-delay:100ms">
+        <h2 class="skills__headline" data-i18n="skills_headline_html">TECHNICAL<br>RIGOR.</h2>
+        <p class="skills__desc" data-i18n="skills_desc">
+          A discipline-first skillset built on computer science fundamentals,
+          low-level systems expertise, and a relentless drive to understand
+          how machines truly work.
+        </p>
+      </div>
+
+      <div class="skills__clusters fade-up" style="transition-delay:200ms">
+
+        <div>
+          <p class="skills__cluster-label" data-i18n="cluster_1">SYSTEMS_CLUSTER</p>
+          <div class="skill-row" data-pct="92">
+            <span class="skill-row__name">Linux</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">92%</span>
+          </div>
+          <div class="skill-row" data-pct="87">
+            <span class="skill-row__name" data-i18n="skill_asm">Assembly x86</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">87%</span>
+          </div>
+          <div class="skill-row" data-pct="90">
+            <span class="skill-row__name" data-i18n="skill_c">C Language</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">90%</span>
+          </div>
+          <div class="skill-row" data-pct="85">
+            <span class="skill-row__name" data-i18n="skill_sysprog">System Programming</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">85%</span>
+          </div>
+          <div class="skill-row" data-pct="98">
+            <span class="skill-row__name">JavaScript</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">98%</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="skills__cluster-label" data-i18n="cluster_2">SOFTWARE_CLUSTER</p>
+          <div class="skill-row" data-pct="93">
+            <span class="skill-row__name" data-i18n="skill_algo">Algorithm Analysis</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">93%</span>
+          </div>
+          <div class="skill-row" data-pct="82">
+            <span class="skill-row__name">Python</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">82%</span>
+          </div>
+          <div class="skill-row" data-pct="78">
+            <span class="skill-row__name">Docker</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">78%</span>
+          </div>
+          <div class="skill-row" data-pct="90">
+            <span class="skill-row__name" data-i18n="skill_git">Git / Version Control</span>
+            <div class="skill-row__bar"><div class="skill-row__fill"></div></div>
+            <span class="skill-row__pct">90%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects" aria-label="Projects">
+    <div class="container">
+      <p class="label fade-up" data-i18n="projects_label">03 — SELECTED_REPOS</p>
+
+      <div class="projects__header fade-up" style="transition-delay:100ms">
+        <h2 class="projects__headline" data-i18n="projects_headline">PROJECTS.</h2>
+        <p class="projects__meta" data-i18n="projects_meta">SELECTED_REPOS / 04</p>
+      </div>
+
+      <div class="projects__grid fade-up" style="transition-delay:200ms">
+
+        <div class="proj-card">
+          <p class="proj-card__index">01 / APP</p>
+          <h3 class="proj-card__title" data-i18n="proj1_title_html">PDF LINE<br>DETECTER</h3>
+          <p class="proj-card__desc" data-i18n="proj1_desc">
+            Custom App that detects lines in a PDF to help the reader to keep up wich line he stops reading and
+            not loosing track.
+          </p>
+          <div class="proj-card__tags">
+            <span class="proj-card__tag">JavaScript</span>
+            <span class="proj-card__tag">React</span>
+            <span class="proj-card__tag">liberaries</span>
+          </div>
+          <span class="proj-card__arrow">↗</span>
+        </div>
+
+        <div class="proj-card">
+          <p class="proj-card__index">02 / WEB</p>
+          <h3 class="proj-card__title" data-i18n="proj2_title_html">STORE<br>WEB</h3>
+          <p class="proj-card__desc" data-i18n="proj2_desc">
+            A full responsive redy to go store for any store with backend and costom interface from the admin page.
+          </p>
+          <div class="proj-card__tags">
+            <span class="proj-card__tag">JAVASCRIPT</span>
+            <span class="proj-card__tag">TYPesctipt</span>
+            <span class="proj-card__tag">Nextjs</span>
+            <span class="proj-card__tag">mysql</span>
+          </div>
+          <span class="proj-card__arrow">↗</span>
+        </div>
+
+        <div class="proj-card">
+          <p class="proj-card__index">03 / WEB APP</p>
+          <h3 class="proj-card__title" data-i18n="proj3_title_html">WPA APP<br>sotre</h3>
+          <p class="proj-card__desc" data-i18n="proj3_desc">
+            Interactive APP for small stores using small data bases with a backup backend
+            to store the statistics of the store.
+          </p>
+          <div class="proj-card__tags">
+            <span class="proj-card__tag">JAVASCRIPT</span>
+            <span class="proj-card__tag">react</span>
+            <span class="proj-card__tag">pwa tool</span>
+          </div>
+          <span class="proj-card__arrow">↗</span>
+        </div>
+
+        <div class="proj-card">
+          <p class="proj-card__index">04 / LINUX_TOOLS</p>
+          <h3 class="proj-card__title" data-i18n="proj4_title_html">SYSTEM<br>OPTIMIZER</h3>
+          <p class="proj-card__desc" data-i18n="proj4_desc">
+            CLI utility for Linux system profiling, automated
+            cleaning, performance benchmarking, and reporting.
+          </p>
+          <div class="proj-card__tags">
+            <span class="proj-card__tag">Bash</span>
+            <span class="proj-card__tag">Python</span>
+            <span class="proj-card__tag">Linux</span>
+          </div>
+          <span class="proj-card__arrow">↗</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact" aria-label="Contact">
+    <div class="container">
+      <p class="label fade-up" data-i18n="contact_label">04 — INITIATE_CONTACT</p>
+
+      <div class="contact__grid">
+
+        <div class="fade-up" style="transition-delay:100ms">
+          <h2 class="contact__headline" data-i18n="contact_headline_html">LET'S BUILD<br>SOMETHING<br>PRECISE.</h2>
+          <p class="contact__sub" data-i18n="contact_sub">
+            Available for academic collaborations, open-source
+            contributions, and engineering projects that demand
+            technical depth.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:anesbo2005@gmail.com" class="contact__link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 4l8 9 8-9"/></svg>
+              <span data-i18n="contact_email">EMAIL</span>
+            </a>
+            <a href="https://github.com/anesbo" target="_blank" rel="noopener noreferrer" class="contact__link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77A5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>GITHUB</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact__form fade-up" style="transition-delay:200ms" onsubmit="handleSubmit(event)">
+          <div class="contact__field">
+            <label class="contact__label" for="name" data-i18n="form_name">SUBJECT_NAME</label>
+            <input class="contact__input" type="text" id="name" name="name" placeholder="YOUR_NAME" data-i18n-placeholder="form_name_ph" autocomplete="name" />
+          </div>
+          <div class="contact__field">
+            <label class="contact__label" for="email" data-i18n="form_email">ELECTRONIC_MAIL</label>
+            <input class="contact__input" type="email" id="email" name="email" placeholder="YOUR@EMAIL.COM" data-i18n-placeholder="form_email_ph" autocomplete="email" />
+          </div>
+          <div class="contact__field">
+            <label class="contact__label" for="message" data-i18n="form_message">MESSAGE_DETAILS</label>
+            <textarea class="contact__textarea" id="message" name="message" placeholder="DESCRIBE_THE_WORK..." data-i18n-placeholder="form_message_ph"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn-primary" data-i18n="form_submit">SEND_MESSAGE →</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer">
+      <p class="footer__logo">ANES_BOUZIAD.DEV</p>
+      <p class="footer__copy" data-i18n="footer_copy">© 2026 — CONSTANTINE, ALGERIA — CS_STUDENT</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
