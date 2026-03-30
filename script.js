@@ -101,26 +101,41 @@ skillRows.forEach((row) => {
   skillObserver.observe(row);
 });
 
-function handleSubmit(event) {
+async function handleSubmit(event) {
   event.preventDefault();
+
   const form = event.target;
-  const name = form.name?.value?.trim() || '';
-  const email = form.email?.value?.trim() || '';
-  const message = form.message?.value?.trim() || '';
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
 
   if (!name || !email || !message) {
-    alert(currentLang === 'fr'
-      ? 'Veuillez remplir tous les champs.'
-      : 'Please fill in all fields.');
+    alert('Please fill in all fields.');
     return;
   }
 
-  alert(currentLang === 'fr'
-    ? 'Message prêt à être envoyé.'
-    : 'Message ready to be sent.');
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, email, message })
+    });
 
-  form.reset();
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error('Failed to send message');
+    }
+
+    alert('Message sent successfully.');
+    form.reset();
+  } catch (error) {
+    alert('Something went wrong. Please try again.');
+  }
 }
+
 window.handleSubmit = handleSubmit;
 
 const translations = {
