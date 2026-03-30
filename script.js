@@ -141,7 +141,7 @@ const translations = {
     spec_status_key: 'STATUS',
     spec_status_val: 'CS Student',
     spec_location_key: 'LOCATION',
-    spec_location_val: 'Constantine, DZ',
+    spec_location_val: 'Jijel, DZ',
     spec_focus_key: 'FOCUS',
     spec_focus_val: 'Systems & Low-Level',
     spec_stack_key: 'STACK',
@@ -202,7 +202,7 @@ const translations = {
     form_message_ph: 'DESCRIBE_THE_WORK...',
     form_submit: 'SEND_MESSAGE →',
 
-    footer_copy: '© 2026 — CONSTANTINE, ALGERIA — CS_STUDENT'
+    footer_copy: '© 2026 — Jijel, ALGERIA — CS_STUDENT'
   },
 
   fr: {
@@ -214,7 +214,7 @@ const translations = {
 
     hero_sys: 'INIT_SYSTEME / 2026',
     hero_title_html: 'ANES<br>BOUZIAD.',
-    hero_sub: "Étudiant en informatique à Constantine, Algérie. Passionné par les systèmes Linux, le langage Assembleur, la complexité des algorithmes et la conception d’architectures bas niveau efficaces.",
+    hero_sub: "Étudiant en informatique à Jijel, Algérie. Passionné par les systèmes Linux, le langage Assembleur, la complexité des algorithmes et la conception d’architectures bas niveau efficaces.",
     hero_projects: 'Voir Projets ↗',
     hero_contact: 'Me Contacter',
     hero_spec: '// SYSTEM_SPEC',
@@ -222,7 +222,7 @@ const translations = {
     spec_status_key: 'STATUT',
     spec_status_val: 'Étudiant en informatique',
     spec_location_key: 'LIEU',
-    spec_location_val: 'Constantine, DZ',
+    spec_location_val: 'Jijel, DZ',
     spec_focus_key: 'FOCUS',
     spec_focus_val: 'Systèmes & bas niveau',
     spec_stack_key: 'STACK',
@@ -283,7 +283,7 @@ const translations = {
     form_message_ph: 'DÉCRIVEZ_LE_TRAVAIL...',
     form_submit: 'ENVOYER_MESSAGE →',
 
-    footer_copy: '© 2026 — CONSTANTINE, ALGÉRIE — ÉTUDIANT_CS'
+    footer_copy: '© 2026 — Jijel, ALGÉRIE — ÉTUDIANT_CS'
   }
 };
 
